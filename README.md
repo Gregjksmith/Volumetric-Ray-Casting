@@ -77,6 +77,9 @@ void main()
 
 	rayMarchVolume(pointCloud, lightVec, vip, volumetricImage);
 	cv::imwrite(std::string("testImage.png"), volumetricImage);
+
+	pointCloud.clear();
+	lightVec.clear();
 }
 ```
 
