@@ -7,18 +7,18 @@ Radiance entering each pixel towards the eye is calculated by ray marching throu
 
 ## API
 
-``
+```
 void rayMarchVolume(std::vector<gs::VolumePoint*> &volumePoints, std::vector<gs::Light*> lights, VolumetricImageParams& imageParams, cv::Mat& volumetricImage);
 
 volumePoints : media point cloud
 light : vector of point lights
 imageParams : struct of image paramters. Image width, image height and ray march iterations.
 volumetricImage : image rendered here.
-``
+```
 
 ## Example
 
-``
+```
 #include <stdio.h>
 #include <vector>
 #include "VolumetricRayMarching.h"
@@ -78,4 +78,5 @@ void main()
 	rayMarchVolume(pointCloud, lightVec, vip, volumetricImage);
 	cv::imwrite(std::string("testImage.png"), volumetricImage);
 }
-``
+```
+
